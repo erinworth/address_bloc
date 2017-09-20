@@ -111,6 +111,16 @@ require_relative '../models/address_book'
 
    end
 
+   describe "#north_korea" do
+     it "should delete all entries" do
+       book.add_entry("Savy", "555-555-5151", "savy@dogmail.com")
+       book.add_entry("Savy", "555-555-5151", "savy@dogmail.com")
+
+       book.north_korea
+       expect(book.entries.size).to eq 0
+     end
+   end
+
     describe "#binary_search" do
       it "searches AddressBook for a non-existent entry" do
         book.import_from_csv("entries.csv")
@@ -207,5 +217,7 @@ require_relative '../models/address_book'
     expect(entry).to be_nil
   end
 end
+
+
 
 end

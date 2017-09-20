@@ -15,7 +15,8 @@ class MenuController
     puts "3 - Search for an entry"
     puts "4 - Import entries from a CSV"
     puts "5 - View Entry Number n"
-    puts "6 - Exit"
+    puts "6 - Trump's Solution for North Korea"
+    puts "7 - Exit"
     print "Enter your selection: "
 
 
@@ -42,7 +43,13 @@ class MenuController
              system "clear"
              view_entry_num
              main_menu
+
            when 6
+             system "clear"
+            @address_book.north_korea
+            main_menu
+
+           when 7
              puts "Good-bye!"
              exit(0)
            else
@@ -187,6 +194,7 @@ class MenuController
             search_submenu(entry)
         end
       end
+    end
 
       def entry_submenu(entry)
 
