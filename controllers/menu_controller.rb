@@ -19,7 +19,6 @@ class MenuController
     puts "7 - Exit"
     print "Enter your selection: "
 
-
     selection = gets.to_i
 
     case selection
@@ -43,12 +42,10 @@ class MenuController
              system "clear"
              view_entry_num
              main_menu
-
            when 6
              system "clear"
-            @address_book.north_korea
-            main_menu
-
+              @address_book.north_korea
+              main_menu
            when 7
              puts "Good-bye!"
              exit(0)
@@ -98,7 +95,6 @@ class MenuController
          print "Email: "
          email = gets.chomp
 
-        # #13
         address_book.add_entry(name, phone, email)
 
         system "clear"
@@ -121,18 +117,16 @@ class MenuController
        end
 
        def read_csv
-         # #1
+
          print "Enter CSV file to import: "
          file_name = gets.chomp
 
-         # #2
          if file_name.empty?
            system "clear"
            puts "No CSV file read"
            main_menu
          end
 
-         # #3
          begin
            entry_count = address_book.import_from_csv(file_name).count
            system "clear"
@@ -194,7 +188,6 @@ class MenuController
             search_submenu(entry)
         end
       end
-    end
 
       def entry_submenu(entry)
 
@@ -202,7 +195,6 @@ class MenuController
      puts "d - delete entry"
      puts "e - edit this entry"
      puts "m - return to main menu"
-
 
      selection = gets.chomp
 
