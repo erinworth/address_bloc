@@ -1,1 +1,1 @@
-# Simple Ruby Application to create an address book
+# Simple Ruby application to create an address book
